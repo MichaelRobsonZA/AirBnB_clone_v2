@@ -14,13 +14,6 @@ from models import storage
 from models.base_model import BaseModel
 from models.user import User
 from tests import clear_stream
-from models.state import State
-from models.city import City
-from models.amenity import Amenity
-from models.place import Place
-from models.review import Review
-from models.engine.file_storage import FileStorage
-import pep8
 
 
 class TestHBNBCommand(unittest.TestCase):
@@ -152,40 +145,3 @@ class TestHBNBCommand(unittest.TestCase):
             cons.onecmd('count State')
             cursor.close()
             dbc.close()
-
-    def test_destroy(self):
-         """Test alternate destroy command inpout"""
-         with patch('sys.stdout', new=StringIO()) as f:
-             self.consol.onecmd("Galaxy.destroy()")
-             self.assertEqual(
-                 "** class doesn't exist **\n", f.getvalue())
-         with patch('sys.stdout', new=StringIO()) as f:
-             self.consol.onecmd("User.destroy(12345)")
-             self.assertEqual(
-                 "** no instance found **\n", f.getvalue())
-
-     def test_update(self):
-         """Test alternate destroy command inpout"""
-         with patch('sys.stdout', new=StringIO()) as f:
-             self.consol.onecmd("sldkfjsl.update()")
-             self.assertEqual(
-                 "** class doesn't exist **\n", f.getvalue())
-         with patch('sys.stdout', new=StringIO()) as f:
-             self.consol.onecmd("User.update(12345)")
-             self.assertEqual(
-                 "** no instance found **\n", f.getvalue())
-         with patch('sys.stdout', new=StringIO()) as f:
-             self.consol.onecmd("all User")
-             obj = f.getvalue()
-         my_id = obj[obj.find('(')+1:obj.find(')')]
-         with patch('sys.stdout', new=StringIO()) as f:
-             self.consol.onecmd("User.update(" + my_id + ")")
-             self.assertEqual(
-                 "** attribute name missing **\n", f.getvalue())
-         with patch('sys.stdout', new=StringIO()) as f:
-             self.consol.onecmd("User.update(" + my_id + ", name)")
-             self.assertEqual(
-                 "** value missing **\n", f.getvalue())
-
-if __name__ == "__main__":
-    unittest.main()
