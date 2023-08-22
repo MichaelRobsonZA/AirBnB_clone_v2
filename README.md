@@ -140,3 +140,23 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
+
+<center><h1>AirBnB - MySQL</h1></center>
+This project implements the AirBnB clone application's database using MySQL. In the initial section (AirBnB clone - Console), a console interacted with
+a file storage. With MySQL implementation, our app can now engage with a database engine.
+
+Interaction with the database employed SQLAlchemy and Python DB API 2.0 (MySQLdb).
+
+### Project Objectives
+By project completion, these objectives should be achieved:
+- Grasp unittesting in extensive projects
+- Utilize *args and **kwargs effectively
+- Handle named arguments in functions
+- Create a MySQL database
+- Generate a MySQL user, assign privileges
+- Understand ORM (Object-Relational Mapping)
+- Map a Python class to a MySQL table
+- Manage two storage engines with one codebase
+- Employ environment variables
+
+<br>
