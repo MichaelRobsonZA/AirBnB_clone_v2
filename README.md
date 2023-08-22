@@ -52,32 +52,6 @@ Before proceeding with the MySQL setup, make sure you have the following prerequ
 MySQL server
 MySQL client
 
-
-Steps needed
-1. Clone the Repository
-First, clone the project repository to your local machine using the following command:
-
-git clone https://github.com/your-username/AirBnB_clone_v2.git
-Replace your-username with your actual GitHub username.
-
-2. MySQL Setup Script
-Inside the cloned repository, you will find two SQL setup scripts:
-
-setup_mysql_dev.sql: Script to prepare the MySQL server for development.
-setup_mysql_test.sql: Script to prepare the MySQL server for testing.
-Development Environment Setup
-Open a terminal window and navigate to the root directory of the cloned repository.
-
-Open the setup_mysql_dev.sql script using a text editor of your choice.
-
-Review and customize the script as needed. It creates a database, user, and grants necessary privileges for the development environment.
-
-Run the script using the following command, providing your MySQL root password when prompted:
-
-cat setup_mysql_dev.sql | mysql -hlocalhost -uroot -p
-Testing Environment Setup
-Similar to the development environment setup, follow the above steps with the setup_mysql_test.sql script for the testing environment.
-
 3. Once the repository is cloned locate the "console.py" file and run it as follows:
 ```
 /AirBnB_clone$ ./console.py
